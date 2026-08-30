@@ -2,7 +2,7 @@
 
 [![skills.sh](https://skills.sh/b/Elaraby0/sci-humanizer)](https://skills.sh/Elaraby0/sci-humanizer)
 
-SciHumanizer is an agent skill for clear, natural, evidence-faithful scientific
+SciHumanizer is an agent skill for clear, natural, scientific
 writing. It combines scientific-writing principles with targeted detection of
 formulaic AI prose while protecting claims, numbers, citations, uncertainty,
 and disciplinary terminology.
