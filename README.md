@@ -1,6 +1,6 @@
 # SciHumanizer
 
-[![skills.sh installs](https://skills.sh/b/Elaraby0/sci-humanizer)](https://skills.sh/Elaraby0/sci-humanizer)
+[![skills.sh: sci-humanizer](https://img.shields.io/badge/skills.sh-sci--humanizer-111111)](https://www.skills.sh/elaraby0/sci-humanizer/sci-humanizer)
 
 SciHumanizer is an agent skill for clear, natural scientific writing. It
 improves structure and style without inventing facts, changing results, or
@@ -198,7 +198,7 @@ rights and attribution boundary.
 
 ## Contributors
 
-- [Ahmed (@ahmedawak)](https://github.com/ahmedawak) — helped improve and
+- [Ahmed Wahdan (@ahmedawak)](https://github.com/ahmedawak) — helped improve and
   update SciHumanizer.
 
 ## Contributing and security
