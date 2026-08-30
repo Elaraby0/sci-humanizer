@@ -193,7 +193,7 @@ rights and attribution boundary.
 
 ## Authors
 
-- [Ahmed ELaraby (@Elaraby0)](https://github.com/Elaraby0) — creator and
+- [Ahmed Elaraby (@Elaraby0)](https://github.com/Elaraby0) — creator and
   maintainer.
 
 ## Contributors
