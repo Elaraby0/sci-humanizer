@@ -1,0 +1,22 @@
+[
+  {"query": "Rewrite this abstract so it sounds natural while preserving every result and confidence interval.", "should_trigger": true},
+  {"query": "My Discussion keeps implying causation from a cross-sectional association. Please fix it and make the prose less robotic.", "should_trigger": true},
+  {"query": "Draft the introduction of my ecology paper from these evidence notes; don't add citations.", "should_trigger": true},
+  {"query": "Can you polish the Methods section in manuscript.docx without changing concentrations or reagent IDs?", "should_trigger": true},
+  {"query": "Turn these relative and absolute risks into a patient-friendly explanation.", "should_trigger": true},
+  {"query": "Help me synthesize these eight studies into a narrative-review paragraph rather than a study-by-study list.", "should_trigger": true},
+  {"query": "Write a Specific Aims page for this biomedical grant from the supplied facts.", "should_trigger": true},
+  {"query": "Make this figure legend self-contained and check that its units match the Results.", "should_trigger": true},
+  {"query": "Edit my sociology thesis literature review for scholarly structure, evidence calibration, and a more human voice.", "should_trigger": true},
+  {"query": "Prepare a concise script for presenting these trial results to an interdisciplinary scientific audience.", "should_trigger": true},
+  {"query": "Write a friendly email to my landlord asking when the heater will be repaired.", "should_trigger": false},
+  {"query": "Humanize this fantasy dialogue while keeping each character's voice distinct.", "should_trigger": false},
+  {"query": "Summarize the latest cancer-screening guidelines and browse for current sources.", "should_trigger": false},
+  {"query": "Run a random-effects meta-analysis on these effect sizes and generate a forest plot.", "should_trigger": false},
+  {"query": "Search PubMed for randomized trials of remote blood-pressure monitoring.", "should_trigger": false},
+  {"query": "Recalculate a Cox model from this participant-level dataset and return the coefficients; do not edit any prose.", "should_trigger": false},
+  {"query": "Create a PowerPoint deck with publication-ready scientific figures from my data.", "should_trigger": false},
+  {"query": "Format these references in Vancouver style without editing the manuscript text.", "should_trigger": false},
+  {"query": "Write a polished quarterly business report about sales trends and customer churn.", "should_trigger": false},
+  {"query": "Translate this medical consent form into Arabic without changing its legal meaning.", "should_trigger": false}
+]

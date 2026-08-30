@@ -1,0 +1,4 @@
+interface:
+  display_name: "SciHumanizer"
+  short_description: "Write clear, natural, evidence-faithful scientific prose"
+  default_prompt: "Use $sci-humanizer to write or revise this scientific text without changing or inventing evidence. For paragraphs pasted in chat, show tracked changes and then a clean version."

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Scientific writing",
+      "description": "Evidence-faithful drafting and revision for scientific and scholarly prose.",
+      "skills": [
+        "sci-humanizer"
+      ]
+    }
+  ]
+}

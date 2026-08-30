@@ -1,0 +1,144 @@
+{
+  "skill_name": "sci-humanizer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Please humanize this paragraph for a biomedical journal: In order to determine whether neighborhood deprivation causes hospital readmission, an analysis of the retrospective cohort was conducted. A significant association was observed (adjusted hazard ratio 1.18, 95% CI 1.04-1.34), which proves that deprivation leads to readmission. It is important to note that these groundbreaking findings underscore the need for transformative policy. Keep every supplied number and citation marker [12].",
+      "expected_output": "Two labeled parts—Tracked changes and Clean version. The tracked version uses strikethrough for deletions and bold italics for insertions; the clean version preserves the estimate and citation, corrects causal overreach, removes inflated phrasing, and invents no absolute risk.",
+      "files": [],
+      "expectations": [
+        "The response has Tracked changes and Clean version sections in that order, with no Diagnosis, Draft, or Final section.",
+        "The tracked version contains at least one strikethrough deletion and one bold-italic insertion.",
+        "The adjusted hazard ratio 1.18, 95% CI 1.04-1.34, and citation marker [12] remain attached to the association claim.",
+        "The final does not claim that the retrospective cohort proves causation.",
+        "The final removes disposable metadiscourse and promotional language without adding facts."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Revise this Results paragraph. Do not change or omit any values: Table 2 shows that 62 of 200 participants (31%) in the intervention group and 78 of 198 (39%) in the control group reached the primary endpoint (risk difference -8 percentage points, 95% CI -17 to 1; P=.08). Table 2 also shows a mean length of stay of 4.8 days (SD 2.1) versus 5.0 days (SD 2.4; P=.42). Table 2 further shows that adverse events occurred in 14% and 13%, respectively. Keep this strictly in Results style.",
+      "expected_output": "Tracked changes and Clean version. The clean version leads with the overall result, complements rather than mechanically recites the table, preserves every supplied value and null finding, and avoids interpretation.",
+      "files": [],
+      "expectations": [
+        "Every numerator, denominator, percentage, effect estimate, interval, P value, mean, and SD is preserved.",
+        "The null primary result and other null findings are not hidden.",
+        "The prose does not add mechanisms, implications, or causal interpretation.",
+        "The response uses the pasted-paragraph two-part tracked-and-clean format with visible deletion and insertion markup."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write a concise Introduction from only these notes: Chronic migraine affects daily functioning. Existing preventive drugs are limited by tolerability. Small observational studies suggest that remote behavioral coaching may reduce headache days, but no randomized comparison has evaluated coaching plus usual care versus usual care alone in rural adults. We conducted a pragmatic randomized trial in three rural clinics. Primary question: effect on monthly migraine days at 12 weeks. Do not add prevalence figures or citations.",
+      "expected_output": "Only a polished Introduction that narrows from known information to the gap, states the question or objective, and briefly identifies the approach without reporting results or inventing facts.",
+      "files": [],
+      "expectations": [
+        "The output contains only the polished section, with no tracked-changes, clean-version, diagnosis, or draft labels.",
+        "The logical sequence is known problem, limitation of current options, evidence gap, and study objective or approach.",
+        "No prevalence statistic, result, citation, or unprovided detail is invented.",
+        "The prose remains concise and suitable for a scientific manuscript."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Create the opening and closing paragraphs of a Discussion from these facts only: cross-sectional survey; n=1,204 nurses; burnout was associated with intention to leave (adjusted odds ratio 2.10, 95% CI 1.72-2.57); self-reported exposure and outcome; single health system; response rate 46%; no temporal ordering; practical implication is to test, not assume, whether organizational interventions change retention. Do not write a generic limitations list.",
+      "expected_output": "Only polished Discussion paragraphs that answer the question, calibrate association to a cross-sectional design, state specific interpretive limitations, and end with a measured implication for future testing.",
+      "files": [],
+      "expectations": [
+        "The odds ratio, confidence interval, sample size, and response rate are preserved.",
+        "The text never says burnout caused intention to leave.",
+        "The limitations explain self-report, single-system scope, response, and lack of temporal ordering in relation to interpretation.",
+        "The closing recommends testing organizational interventions rather than asserting they will improve retention."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Draft a structured abstract from the attached mini-manuscript. Use Background, Methods, Results, and Conclusions. Do not exceed 220 words. Preserve all primary-outcome numbers exactly and do not claim efficacy if the confidence interval includes no effect.",
+      "expected_output": "A standalone structured abstract no longer than 220 words whose design, population, outcome, results, and conclusion agree with the source file.",
+      "files": [
+        "evals/files/mini-manuscript.md"
+      ],
+      "expectations": [
+        "The output contains the four requested headings and is no longer than 220 words.",
+        "The participant counts, primary effect, confidence interval, and follow-up duration match the file.",
+        "The conclusion reflects uncertainty because the confidence interval includes no effect.",
+        "No secondary outcome or methodological detail is fabricated."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Turn these findings into a 120-word public-facing explanation for patients: over 1 year, stroke occurred in 20 of 1,000 untreated patients and 15 of 1,000 treated patients; relative risk reduction 25%; major bleeding occurred in 4 of 1,000 untreated patients and 9 of 1,000 treated patients. Explain benefit and harm with a common denominator and avoid telling an individual what treatment to choose.",
+      "expected_output": "Only polished public-facing prose that leads with the takeaway, gives both relative and absolute effects using 1,000 people, presents benefit and harm symmetrically, and avoids individualized medical advice.",
+      "files": [],
+      "expectations": [
+        "The explanation states that treatment corresponds to 5 fewer strokes per 1,000 people over 1 year.",
+        "The explanation states that treatment corresponds to 5 more major bleeds per 1,000 people over 1 year.",
+        "The 25% relative reduction is not presented without the baseline risks.",
+        "The text does not recommend a treatment choice or invent subgroup information."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Synthesize this literature-review paragraph instead of listing studies: Chen et al. found improved sleep after a text-message intervention in college students. Lopez et al. found no improvement after a similar intervention in shift workers. Adeyemi et al. found improvement only among participants with high engagement. All three studies were small and lasted no more than 8 weeks. Retain all author names and do not create citations or numerical effects.",
+      "expected_output": "Tracked changes and Clean version. The clean version organizes the studies around convergence, divergence, possible heterogeneity, and shared limitations rather than presenting one sentence per paper.",
+      "files": [],
+      "expectations": [
+        "Chen, Lopez, and Adeyemi remain in the text with their respective findings intact.",
+        "The synthesis distinguishes population or engagement differences without asserting an unsupported mechanism.",
+        "The shared limitations of small samples and no more than 8 weeks are retained.",
+        "No citation, effect estimate, or study detail is invented.",
+        "The response uses the pasted-paragraph two-part tracked-and-clean format with visible deletion and insertion markup."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Draft a one-page-style Specific Aims section from only these notes: problem—medication errors during pediatric hospital discharge; gap—current checklists do not test caregiver understanding; long-term goal—safer transitions home; objective—evaluate a teach-back discharge bundle; central hypothesis—the bundle will improve caregiver comprehension and reduce 30-day medication discrepancies; Aim 1—cluster randomized trial in 12 wards, primary outcome caregiver comprehension at discharge; Aim 2—compare medication discrepancies at 30 days; payoff—evidence for scalable discharge practice. Do not invent effect sizes, power, preliminary data, or citations.",
+      "expected_output": "Only a polished Specific Aims section that establishes importance, gap, goal, objective, hypothesis, two distinct aims with approach and outcome, and expected payoff without invented support.",
+      "files": [],
+      "expectations": [
+        "The problem, gap, long-term goal, objective, and hypothesis are explicit.",
+        "Both aims are distinct and retain the 12-ward cluster design and stated outcomes.",
+        "The section ends with a concrete payoff rather than generic enthusiasm.",
+        "No effect size, sample size beyond 12 wards, power claim, preliminary finding, or citation is invented."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Edit the attached Methods section in place for clarity. Preserve every heading, reagent identifier, temperature, duration, concentration, unit, software version, and citation. Return only the polished file text.",
+      "expected_output": "Only a polished Methods section that remains reproducible and preserves all technical identifiers, parameters, headings, and citations from the input file.",
+      "files": [
+        "evals/files/methods-sample.md"
+      ],
+      "expectations": [
+        "All headings and every supplied reagent identifier, temperature, duration, concentration, unit, software version, and citation are preserved exactly.",
+        "The revision clarifies actors and sequence without forcing all sentences into active voice.",
+        "No tracked-changes, clean-version, diagnosis, or draft label is included because this is file mode.",
+        "No methodological step is added or removed."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Review this sentence for statistical meaning, then revise it: The nonsignificant P value (P=.12) demonstrated that the two treatments were equivalent. The trial was designed for superiority and reported a mean difference of 2.4 points (95% CI -0.8 to 5.6).",
+      "expected_output": "Tracked changes and Clean version. The tracked version flags or visibly corrects the unsupported equivalence inference, and the clean version reports the estimate and interval without silently converting the design.",
+      "files": [],
+      "expectations": [
+        "The response explicitly identifies the equivalence inference as unsupported.",
+        "P=.12, the mean difference of 2.4 points, and 95% CI -0.8 to 5.6 are preserved.",
+        "The clean version uses wording calibrated to a superiority trial and an interval spanning no difference.",
+        "The response does not invent an equivalence margin or claim.",
+        "The response uses the pasted-paragraph two-part tracked-and-clean format with visible deletion and insertion markup."
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Polish this pasted paragraph for a scientific manuscript: In order to evaluate the response, an analysis of the samples was conducted. The results proves that treatment A is better. Show me what you changed and preserve the claim cautiously because no design or numerical results were supplied.",
+      "expected_output": "Exactly two sections: Tracked changes and Clean version. The first begins from the supplied paragraph and marks deletions with strikethrough and insertions with bold italics; the second contains the accepted revision without tracking markup. It does not invent a design, result, or causal conclusion.",
+      "files": [],
+      "expectations": [
+        "Tracked changes appears before Clean version, and no Diagnosis, Draft, or Final section appears.",
+        "The tracked version contains Markdown strikethrough and bold-italic insertion syntax.",
+        "The clean version contains no strikethrough or bold-italic tracking syntax.",
+        "The revision does not invent a study design, numerical result, or evidence that treatment A is superior."
+      ]
+    }
+  ]
+}
