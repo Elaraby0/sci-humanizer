@@ -77,9 +77,22 @@ AI_CODED_PHRASES = (
     "this is not to say",
     "some might argue",
     "here's what you need to know",
+    "that is the real win",
+    "that distinction matters",
+    "let that sink in",
+    "read that again",
+    "let's dive in",
+    "let's break this down",
+    "here's the thing",
+    "let's be honest",
+    "without further ado",
+    "a tempting approach would be",
+    "it would be easy to just",
     "i hope this helps",
     "let me know",
 )
+# These are review cues, not deletion rules. Do not add scientific association
+# language or ordinary hedges: a regex cannot judge their evidential meaning.
 
 TRANSITIONS = (
     "additionally",
@@ -156,7 +169,8 @@ def snippet(text: str, start: int, width: int = 150) -> str:
 
 
 def phrase_hits(text: str, phrases: tuple[str, ...]) -> list[dict[str, Any]]:
-    lower = text.lower()
+    # Match typographic apostrophes without changing snippet offsets or prose.
+    lower = text.lower().replace("’", "'")
     hits: list[dict[str, Any]] = []
     for phrase in phrases:
         for match in re.finditer(r"\b" + re.escape(phrase) + r"\b", lower):

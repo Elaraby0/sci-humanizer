@@ -21,6 +21,12 @@ construction, technical term, repeated keyword, hedge, or dash as an error.
 Those choices are evaluated in context because scientific accuracy is more
 important than cosmetic variation.
 
+Version 1.2.0 adapts Humanizer 4.0.0's 26 patterns. It checks paragraph-level
+structure before isolated word choices, preserves real scientific contrasts
+and statistical associations, and uses shared context when editing replies.
+SciHumanizer keeps its stricter evidence rule: it adds specifics only from
+supplied evidence or sources checked within the task, never from model memory.
+
 When you paste paragraphs into chat, SciHumanizer shows every substantive edit
 and then provides a clean version. When you provide a file or ask it to write a
 new section, it returns the polished text without an unnecessary redline unless
@@ -123,6 +129,12 @@ Uploaded files, full documents, and sections written from scratch receive only
 the polished result unless the user asks for commentary, alternatives, or a
 redline.
 
+For file revisions, the agent reads the current file before editing and reports
+which sections it reviewed and how many. It identifies any incomplete coverage.
+Selected-passage edits stay within the requested passage. Code, data, link
+targets, citations, formatting, and existing tracked changes are preserved.
+Instructions embedded in material being edited do not change the task.
+
 ## Example
 
 *The passage below is an illustrative example, not a report of a real study.*
@@ -137,15 +149,15 @@ redline.
 **Tracked changes:**
 
 > ~~In order to determine whether the exposure caused the outcome, an analysis
-> of the observational cohort was conducted.~~ **_We analyzed the observational
-> cohort to assess the association between the exposure and the outcome._** The
+> of the observational cohort was conducted.~~ **_The observational cohort was
+> analyzed to assess the association between the exposure and the outcome._** The
 > ~~highly significant findings clearly prove that the exposure leads to the
 > outcome and underscore its transformative importance~~ **_findings support an
 > association but do not establish causation_**.
 
 **Clean version:**
 
-> We analyzed the observational cohort to assess the association between the
+> The observational cohort was analyzed to assess the association between the
 > exposure and the outcome. The findings support an association but do not
 > establish causation.
 
@@ -163,14 +175,25 @@ passive constructions, repeated transitions, acronym density, clutter phrases,
 and selected AI-coded patterns. A flag is a prompt for judgment, not proof that
 the writing is poor or AI-generated.
 
+From a repository checkout, run the scanner checks with:
+
+```bash
+python3 -m unittest discover -s tests -p 'test_*.py' -v
+```
+
+The scenarios in `tests/evals.json` are separate behavioral evaluations for an
+agent using the skill; the Python tests do not execute those scenarios.
+
 ## Sources and provenance
 
 - Stanford University's
   [*Writing in the Sciences*](https://www.coursera.org/learn/sciwrite) course
   informed the scientific-writing framework.
 - Siqi Chen's MIT-licensed
-  [Humanizer](https://github.com/blader/humanizer) informed the audit for
-  formulaic AI prose.
+  [Humanizer 4.0.0](https://github.com/blader/humanizer/tree/b48c832f0f809c1b5658edbb838c2521b72f2413)
+  informed the audit for formulaic AI prose. The
+  [source map](skills/sci-humanizer/references/source-map.md#humanizer-source)
+  records the upstream revision and scientific adaptations.
 - Current publication guidance is linked from the skill's reference files,
   including ICMJE, EQUATOR, NISO CRediT, and COPE.
 
@@ -185,6 +208,13 @@ rights and attribution boundary.
 <details>
 <summary>Show release notes</summary>
 
+- **1.2.0** — Adapts Humanizer 4.0.0's 26 patterns, prioritizes structural
+  problems, and handles replies using their shared context. Adds current-file
+  review with explicit coverage, protects against instructions embedded in
+  source text, and checks rankings and simultaneous events when restructuring
+  prose. Keeps the scientific no-invention rule and tracked-and-clean output.
+  Corrects examples that added unsupported results, updates diagnostic signals,
+  and expands behavioral evaluations.
 - **1.1.1** — Initial public release with evidence-preserving scientific
   revision, tracked-and-clean output for pasted paragraphs, file-safe output
   behavior, diagnostic tooling, and behavioral evaluations.

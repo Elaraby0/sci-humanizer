@@ -3,8 +3,11 @@
 SciHumanizer is an independent instructional synthesis informed by:
 
 1. Stanford University's *Writing in the Sciences* course; and
-2. Humanizer 2.11.2 by Siqi Chen (`blader/humanizer`), distributed under the
+2. Humanizer 4.0.0 by Siqi Chen (`blader/humanizer`), distributed under the
    MIT License.
+
+The Humanizer adaptation was updated from 2.11.2 to 4.0.0 in SciHumanizer
+1.2.0. The source map records the upstream commit and scientific exceptions.
 
 This skill is not affiliated with, endorsed by, or an official product of
 Stanford University, Coursera, the course authors, or the Humanizer project.

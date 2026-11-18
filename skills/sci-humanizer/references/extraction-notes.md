@@ -83,12 +83,18 @@ instruction. The specific current requirement takes priority.
 
 ## Humanizer integration
 
-The original `humanizer` 2.11.2 skill remains unchanged. SciHumanizer adapts
-its catalog of formulaic AI patterns and its emphasis on specificity and
-natural rhythm, then constrains those ideas with scientific safeguards. Terms
-that are generic in everyday prose may be necessary technical terms in science;
-all pattern matches are therefore contextual signals rather than forbidden
-tokens. SciHumanizer makes no claim that a revision will evade AI detection.
+The original synthesis used Humanizer 2.11.2. SciHumanizer 1.2.0 updates the
+adaptation to Humanizer 4.0.0, reviewed on 2026-11-18; this update does not
+re-extract or redistribute the course corpus. See `source-map.md` for the
+upstream commit and change mapping.
+
+SciHumanizer adapts the catalog of formulaic patterns and its emphasis on
+specificity and natural rhythm, then constrains those ideas with scientific
+safeguards. It does not adopt 4.0.0's permission to add facts from model
+knowledge. Specifics require supplied or checked evidence. Terms that are
+generic in everyday prose may be necessary technical terms in science; pattern
+matches are contextual signals rather than forbidden tokens. SciHumanizer
+makes no claim that a revision will evade AI detection.
 
 ## Known limits
 
